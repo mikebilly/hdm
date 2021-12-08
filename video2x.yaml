@@ -7,7 +7,7 @@
 # Items commented out are parameters irrelevant to this context
 #   or parameters handled by Video2X internally.
 waifu2x_caffe:
-  path: '%LOCALAPPDATA%\video2x\waifu2x-caffe\waifu2x-caffe-cui'
+  path: '/content/waifu2x-caffe/waifu2x-caffe-cui.exe'
   tta: 1 # <0|1> 8x slower and slightly high quality
   gpu: 0 # gpu device no
   batch_size: 1 # input batch size
