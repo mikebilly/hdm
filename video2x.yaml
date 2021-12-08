@@ -7,7 +7,7 @@
 # Items commented out are parameters irrelevant to this context
 #   or parameters handled by Video2X internally.
 waifu2x_caffe:
-  path: '/content/waifu2x-ncnn-vulkan-20210521-ubuntu/waifu2x-ncnn-vulkan'
+  path: '/content/waifu2x-caffe/waifu2x-caffe-cui'
   tta: 1 # <0|1> 8x slower and slightly high quality
   gpu: 0 # gpu device no
   batch_size: 1 # input batch size
@@ -53,7 +53,7 @@ waifu2x_converter_cpp:
   #output: null # path to output image file or directory  (you should use the full path)
   #input: null # (required) path to input image file or directory (you should use the full path)
 waifu2x_ncnn_vulkan:
-  path: '/content/waifu2x-ncnn-vulkan-20200818-linux/waifu2x-ncnn-vulkan'
+  path: '/content/waifu2x-ncnn-vulkan-20210521-ubuntu/waifu2x-ncnn-vulkan'
   v: null # verbose output
   #i: null # input-path: input image path (jpg/png/webp) or directory
   #o: null # output-path: output image path (jpg/png/webp) or directory
