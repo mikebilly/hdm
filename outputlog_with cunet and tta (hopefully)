@@ -1,0 +1,144 @@
+version 3.3
+root 2021-12-11 06:56:15,477 INFO     dandere2x_logger.py set_dandere2x_logger: Dandere2x Console Logger Set
+workspace : /content/dandere2x/src/workspace
+scale_factor : 2
+quality_minimum : 97
+denoise_level : 3
+block_size : 30
+output_file : /content/output_vid.mkv
+input_file : /content/ezvid.mkv
+output_options : {'realsr_ncnn_vulkan': {'output_options': {'-g': None, '-load-proc-save_threads': None, '-model-path': None, '-tile-size': 200, '-verbose': None}}, 'dandere2x': {'bleed': 3}, 'dandere2x_cpp': {'block_matching_arg': 'exhaustive', 'evaluator_arg': 'mse'}, 'ffmpeg': {'pre_process_video': {'-hwaccel': 'auto', 'output_options': {'-pix_fmt': 'rgba64le', '-vsync': 'cfr', '-crf': 1, '-vf': [' null']}}, 'convert_video_to_gif': {'output_options': {'-pix_fmt': 'yuv420p', '-r': 15}}, 'pipe_video': {'-hwaccel': 'auto', 'output_options': {'-loglevel': 'panic', '-y': '-f', 'image2pipe': True, '-i': '-', '-vcodec': 'libx264', '-preset': 'slow', '-qscale': 5, '-crf': 15, '-vf': [' deband=range=8:blur=false, pp7=qp=2:mode=medium']}}, 'migrate_audio': {'output_options': {'-c': 'copy', '-y': True}}}, 'waifu2x_ncnn_vulkan': {'output_options': {'-g': None, '-load-proc-save_threads': None, '-m': 'models-cunet', '-tile-size': 200, '-verbose': None, '-x': True}}, 'waifu2x_converter': {'output_options': {'--block-size': None, '--disable-gpu': None, '--force-OpenCL': True, '--image-quality': None, '--jobs': None, '--mode': None, '--model-dir': None, '--output-format': None, '--png-compression': None, '--processor': None, '--silent': True}}, 'waifu2x_caffe': {'output_options': {'-batch_size': None, '-crop_size': None, '-gpu': None, '-model_dir': None, '-output_depth': None, '-output_quality': None, '-process': 'cudnn', '-tta': None}}}
+name : Master Service Request
+processing_type : ProcessingType.SINGLE_PROCESS
+upscale_engine : UpscalingEngineType.VULKAN
+attempting to make or clear /content/dandere2x/src/workspace
+setting json {'streams': [{'index': 0, 'codec_name': 'h264', 'codec_long_name': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10', 'profile': 'High', 'codec_type': 'video', 'codec_time_base': '1/60', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'width': 576, 'height': 576, 'coded_width': 576, 'coded_height': 576, 'has_b_frames': 2, 'sample_aspect_ratio': '1:1', 'display_aspect_ratio': '1:1', 'pix_fmt': 'yuv420p', 'level': 30, 'color_range': 'tv', 'color_space': 'bt709', 'color_transfer': 'bt709', 'color_primaries': 'bt709', 'chroma_location': 'left', 'field_order': 'progressive', 'refs': 1, 'is_avc': 'true', 'nal_length_size': '4', 'r_frame_rate': '30/1', 'avg_frame_rate': '30/1', 'time_base': '1/1000', 'start_pts': 67, 'start_time': '0.067000', 'bits_per_raw_sample': '8', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'DURATION': '00:00:00.967000000'}}, {'index': 1, 'codec_name': 'aac', 'codec_long_name': 'AAC (Advanced Audio Coding)', 'profile': 'HE-AAC', 'codec_type': 'audio', 'codec_time_base': '1/44100', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'sample_fmt': 'fltp', 'sample_rate': '44100', 'channels': 2, 'channel_layout': 'stereo', 'bits_per_sample': 0, 'r_frame_rate': '0/0', 'avg_frame_rate': '0/0', 'time_base': '1/1000', 'start_pts': 7, 'start_time': '0.007000', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'DURATION': '00:00:00.901000000'}}], 'format': {'filename': '/content/ezvid.mkv', 'nb_streams': 2, 'nb_programs': 0, 'format_name': 'matroska,webm', 'format_long_name': 'Matroska / WebM', 'start_time': '0.007000', 'duration': '0.967000', 'size': '130856', 'bit_rate': '1082572', 'probe_score': 100, 'tags': {'ENCODER': 'Lavf58.29.100'}}}
+setting json {'streams': [{'index': 0, 'codec_name': 'h264', 'codec_long_name': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10', 'profile': 'High', 'codec_type': 'video', 'codec_time_base': '1/60', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'width': 576, 'height': 576, 'coded_width': 576, 'coded_height': 576, 'has_b_frames': 2, 'sample_aspect_ratio': '1:1', 'display_aspect_ratio': '1:1', 'pix_fmt': 'yuv420p', 'level': 30, 'color_range': 'tv', 'color_space': 'bt709', 'color_transfer': 'bt709', 'color_primaries': 'bt709', 'chroma_location': 'left', 'field_order': 'progressive', 'refs': 1, 'is_avc': 'true', 'nal_length_size': '4', 'r_frame_rate': '30/1', 'avg_frame_rate': '30/1', 'time_base': '1/1000', 'start_pts': 67, 'start_time': '0.067000', 'bits_per_raw_sample': '8', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'DURATION': '00:00:00.967000000'}}, {'index': 1, 'codec_name': 'aac', 'codec_long_name': 'AAC (Advanced Audio Coding)', 'profile': 'HE-AAC', 'codec_type': 'audio', 'codec_time_base': '1/44100', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'sample_fmt': 'fltp', 'sample_rate': '44100', 'channels': 2, 'channel_layout': 'stereo', 'bits_per_sample': 0, 'r_frame_rate': '0/0', 'avg_frame_rate': '0/0', 'time_base': '1/1000', 'start_pts': 7, 'start_time': '0.007000', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'DURATION': '00:00:00.901000000'}}], 'format': {'filename': '/content/ezvid.mkv', 'nb_streams': 2, 'nb_programs': 0, 'format_name': 'matroska,webm', 'format_long_name': 'Matroska / WebM', 'start_time': '0.007000', 'duration': '0.967000', 'size': '130856', 'bit_rate': '1082572', 'probe_score': 100, 'tags': {'ENCODER': 'Lavf58.29.100'}}}
+root 2021-12-11 06:56:15,980 WARNING  ffmpeg.py re_encode_video: Re-encoding your video, this may take some time.
+ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, matroska,webm, from '/content/ezvid.mkv':
+  Metadata:
+    ENCODER         : Lavf58.29.100
+  Duration: 00:00:00.97, start: 0.007000, bitrate: 1082 kb/s
+    Stream #0:0: Video: h264 (High), yuv420p(tv, bt709, progressive), 576x576 [SAR 1:1 DAR 1:1], 30 fps, 30 tbr, 1k tbn, 60 tbc (default)
+    Metadata:
+      DURATION        : 00:00:00.967000000
+    Stream #0:1: Audio: aac (HE-AAC), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      DURATION        : 00:00:00.901000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+  Stream #0:1 -> #0:1 (aac (native) -> vorbis (libvorbis))
+Press [q] to stop, [?] for help
+[h264 @ 0x564a60922000] A hardware frames context is required for VDPAU decoding.
+Incompatible pixel format 'rgba64le' for codec 'libx264', auto-selecting format 'yuv444p'
+[libx264 @ 0x564a607fa800] using SAR=1/1
+[libx264 @ 0x564a607fa800] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 BMI2 AVX2
+[libx264 @ 0x564a607fa800] profile High 4:4:4 Predictive, level 3.0, 4:4:4 8-bit
+[libx264 @ 0x564a607fa800] 264 - core 152 r2854 e9a5903 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x1:0x111 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=0 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=4 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=1.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, matroska, to '/content/dandere2x/src/workspace/pre_processed.mkv':
+  Metadata:
+    encoder         : Lavf57.83.100
+    Stream #0:0: Video: h264 (libx264) (H264 / 0x34363248), yuv444p, 570x570 [SAR 1:1 DAR 1:1], q=-1--1, 30 fps, 1k tbn, 30 tbc (default)
+    Metadata:
+      DURATION        : 00:00:00.967000000
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+    Stream #0:1: Audio: vorbis (libvorbis) (oV[0][0] / 0x566F), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      DURATION        : 00:00:00.901000000
+      encoder         : Lavc57.107.100 libvorbis
+frame=   29 fps= 20 q=-1.0 Lsize=    1319kB time=00:00:00.92 bitrate=11660.3kbits/s dup=2 drop=0 speed=0.634x    
+video:1302kB audio:12kB subtitle:0kB other streams:0kB global headers:4kB muxing overhead: 0.424399%
+[libx264 @ 0x564a607fa800] frame I:2     Avg QP: 2.96  size: 73226
+[libx264 @ 0x564a607fa800] frame P:14    Avg QP: 4.45  size: 55948
+[libx264 @ 0x564a607fa800] frame B:13    Avg QP: 4.78  size: 31013
+[libx264 @ 0x564a607fa800] consecutive B-frames: 34.5% 13.8% 10.3% 41.4%
+[libx264 @ 0x564a607fa800] mb I  I16..4: 38.3%  0.0% 61.7%
+[libx264 @ 0x564a607fa800] mb P  I16..4: 23.3%  0.0% 45.9%  P16..4:  8.6%  6.1%  4.4%  0.0%  0.0%    skip:11.8%
+[libx264 @ 0x564a607fa800] mb B  I16..4:  5.2%  0.0% 12.6%  B16..8: 16.1%  8.5%  4.7%  direct:17.1%  skip:35.8%  L0:28.6% L1:55.8% BI:15.6%
+[libx264 @ 0x564a607fa800] coded y,u,v intra: 69.2% 65.4% 68.9% inter: 36.2% 32.6% 33.5%
+[libx264 @ 0x564a607fa800] i16 v,h,dc,p: 73% 19%  5%  2%
+[libx264 @ 0x564a607fa800] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 58% 19%  7%  2%  3%  5%  2%  3%  2%
+[libx264 @ 0x564a607fa800] Weighted P-Frames: Y:14.3% UV:14.3%
+[libx264 @ 0x564a607fa800] ref P L0: 68.9% 19.6%  9.0%  2.4%  0.1%
+[libx264 @ 0x564a607fa800] ref B L0: 95.1%  4.6%  0.3%
+[libx264 @ 0x564a607fa800] ref B L1: 99.1%  0.9%
+[libx264 @ 0x564a607fa800] kb/s:11030.86
+pre_processed.mkv 2021-12-11 06:56:17,539 INFO     dandere2x_logger.py set_dandere2x_logger: Dandere2x Console Logger Set
+setting json {'streams': [{'index': 0, 'codec_name': 'h264', 'codec_long_name': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10', 'profile': 'High 4:4:4 Predictive', 'codec_type': 'video', 'codec_time_base': '1/60', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'width': 570, 'height': 570, 'coded_width': 570, 'coded_height': 570, 'has_b_frames': 2, 'sample_aspect_ratio': '1:1', 'display_aspect_ratio': '1:1', 'pix_fmt': 'yuv444p', 'level': 30, 'chroma_location': 'left', 'field_order': 'progressive', 'refs': 1, 'is_avc': 'true', 'nal_length_size': '4', 'r_frame_rate': '30/1', 'avg_frame_rate': '30/1', 'time_base': '1/1000', 'start_pts': 0, 'start_time': '0.000000', 'bits_per_raw_sample': '8', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'ENCODER': 'Lavc57.107.100 libx264', 'DURATION': '00:00:00.969000000'}}, {'index': 1, 'codec_name': 'vorbis', 'codec_long_name': 'Vorbis', 'codec_type': 'audio', 'codec_time_base': '1/44100', 'codec_tag_string': '[0][0][0][0]', 'codec_tag': '0x0000', 'sample_fmt': 'fltp', 'sample_rate': '44100', 'channels': 2, 'channel_layout': 'stereo', 'bits_per_sample': 0, 'r_frame_rate': '0/0', 'avg_frame_rate': '0/0', 'time_base': '1/1000', 'start_pts': 0, 'start_time': '0.000000', 'disposition': {'default': 1, 'dub': 0, 'original': 0, 'comment': 0, 'lyrics': 0, 'karaoke': 0, 'forced': 0, 'hearing_impaired': 0, 'visual_impaired': 0, 'clean_effects': 0, 'attached_pic': 0, 'timed_thumbnails': 0}, 'tags': {'ENCODER': 'Lavc57.107.100 libvorbis', 'DURATION': '00:00:00.932000000'}}], 'format': {'filename': '/content/dandere2x/src/workspace/pre_processed.mkv', 'nb_streams': 2, 'nb_programs': 0, 'format_name': 'matroska,webm', 'format_long_name': 'Matroska / WebM', 'start_time': '0.000000', 'duration': '0.969000', 'size': '1351142', 'bit_rate': '11154939', 'probe_score': 100, 'tags': {'ENCODER': 'Lavf57.83.100'}}}
+pre_processed.mkv 2021-12-11 06:56:17,920 INFO     __init__.py run     : called.
+pre_processed.mkv 2021-12-11 06:56:17,921 INFO     __init__.py __create_directories: Creating directories. Starting with /content/dandere2x/src/workspace/subworkspace first
+pre_processed.mkv 2021-12-11 06:56:17,921 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/log_dir/ 
+pre_processed.mkv 2021-12-11 06:56:17,921 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/merged/ 
+pre_processed.mkv 2021-12-11 06:56:17,921 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/residual_images/ 
+pre_processed.mkv 2021-12-11 06:56:17,922 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/debug/ 
+pre_processed.mkv 2021-12-11 06:56:17,922 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/temp_image_folder/ 
+pre_processed.mkv 2021-12-11 06:56:17,922 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/compressed_static/ 
+pre_processed.mkv 2021-12-11 06:56:17,922 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/encoded/ 
+pre_processed.mkv 2021-12-11 06:56:17,922 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/residual_upscaled/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/fade_data/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/residual_data/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/noised_inputs/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/console_output/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/inputs/ 
+pre_processed.mkv 2021-12-11 06:56:17,923 INFO     __init__.py __create_directories: Successfully created the directory /content/dandere2x/src/workspace/subworkspace/pframe_data/ 
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     __init__.py run     : Dandere2x Threads Set.. going live with the following context file.
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: Context Settings:
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: service_request : <dandere2x.dandere2x_service_request.Dandere2xServiceRequest object at 0x7fc6a71a13d0>
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: input_frames_dir : /content/dandere2x/src/workspace/subworkspace/inputs/
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: noised_input_frames_dir : /content/dandere2x/src/workspace/subworkspace/noised_inputs/
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: residual_images_dir : /content/dandere2x/src/workspace/subworkspace/residual_images/
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: residual_upscaled_dir : /content/dandere2x/src/workspace/subworkspace/residual_upscaled/
+pre_processed.mkv 2021-12-11 06:56:17,924 INFO     dandere2x_service_context.py log_all_variables: residual_data_dir : /content/dandere2x/src/workspace/subworkspace/residual_data/
+pre_processed.mkv 2021-12-11 06:56:17,925 INFO     dandere2x_service_context.py log_all_variables: pframe_data_dir : /content/dandere2x/src/workspace/subworkspace/pframe_data/
+pre_processed.mkv 2021-12-11 06:56:17,925 INFO     dandere2x_service_context.py log_all_variables: merged_dir : /content/dandere2x/src/workspace/subworkspace/merged/
+pre_processed.mkv 2021-12-11 06:56:17,925 INFO     dandere2x_service_context.py log_all_variables: fade_data_dir : /content/dandere2x/src/workspace/subworkspace/fade_data/
+pre_processed.mkv 2021-12-11 06:56:17,925 INFO     dandere2x_service_context.py log_all_variables: debug_dir : /content/dandere2x/src/workspace/subworkspace/debug/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: console_output_dir : /content/dandere2x/src/workspace/subworkspace/console_output/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: compressed_static_dir : /content/dandere2x/src/workspace/subworkspace/compressed_static/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: encoded_dir : /content/dandere2x/src/workspace/subworkspace/encoded/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: temp_image_folder : /content/dandere2x/src/workspace/subworkspace/temp_image_folder/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: log_dir : /content/dandere2x/src/workspace/subworkspace/log_dir/
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: directories : {'/content/dandere2x/src/workspace/subworkspace/log_dir/', '/content/dandere2x/src/workspace/subworkspace/merged/', '/content/dandere2x/src/workspace/subworkspace/residual_images/', '/content/dandere2x/src/workspace/subworkspace/debug/', '/content/dandere2x/src/workspace/subworkspace/temp_image_folder/', '/content/dandere2x/src/workspace/subworkspace/compressed_static/', '/content/dandere2x/src/workspace/subworkspace/encoded/', '/content/dandere2x/src/workspace/subworkspace/residual_upscaled/', '/content/dandere2x/src/workspace/subworkspace/fade_data/', '/content/dandere2x/src/workspace/subworkspace/residual_data/', '/content/dandere2x/src/workspace/subworkspace/noised_inputs/', '/content/dandere2x/src/workspace/subworkspace/console_output/', '/content/dandere2x/src/workspace/subworkspace/inputs/', '/content/dandere2x/src/workspace/subworkspace/pframe_data/'}
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: video_settings : <dandere2x.dandere2xlib.wrappers.ffmpeg.videosettings.VideoSettings object at 0x7fc6a71a1150>
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: width : 570
+pre_processed.mkv 2021-12-11 06:56:17,926 INFO     dandere2x_service_context.py log_all_variables: height : 570
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: frame_count : 29
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: frame_rate : 30.0
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: bleed : 3
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: temp_image : /content/dandere2x/src/workspace/subworkspace/temp_image_folder/tempimage.jpg
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: debug : False
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: step_size : 4
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: max_frames_ahead : 100
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: dandere2x_cpp_block_matching_arg : exhaustive
+pre_processed.mkv 2021-12-11 06:56:17,927 INFO     dandere2x_service_context.py log_all_variables: dandere2x_cpp_evaluator_arg : mse
+pre_processed.mkv 2021-12-11 06:56:33,893 INFO     __init__.py __upscale_first_frame: Time to upscale a single frame: 13.07 
+pre_processed.mkv 2021-12-11 06:56:33,897 INFO     merge.py run     : Started
+pre_processed.mkv 2021-12-11 06:56:33,898 INFO     residual.py run     : Run called.
+pre_processed.mkv 2021-12-11 06:56:33,903 INFO     pipe_thread.py run     : Run Called
+pre_processed.mkv 2021-12-11 06:56:33,913 INFO     pipe_thread.py _setup_pipe: Setting up pipe Called
+pre_processed.mkv 2021-12-11 06:56:33,916 INFO     pipe_thread.py _setup_pipe: ffmpeg_pipe_command ['ffmpeg', '-hwaccel', 'auto', '-r', '30.0', '-loglevel', 'panic', '-y', '-f', 'image2pipe', '-i', '-', '-vcodec', 'libx264', '-preset', 'slow', '-qscale', '5', '-crf', '15', '-vf', ' deband=range=8:blur=false, pp7=qp=2:mode=medium', '-r', '30.0', '/content/dandere2x/src/workspace/non_migrated.mkv']
+pre_processed.mkv 2021-12-11 06:56:33,921 INFO     status_thread.py run     : Run called.
+pre_processed.mkv 2021-12-11 06:58:30,801 INFO     status_thread.py run     : [File: pre_processed.mkv][Frame: [10] 39%]    Average of Last 10 Frames: 11.69 sec / frame
+pre_processed.mkv 2021-12-11 07:00:37,138 INFO     status_thread.py run     : [File: pre_processed.mkv][Frame: [20] 75%]    Average of Last 10 Frames: 12.63 sec / frame
+pre_processed.mkv 2021-12-11 07:01:52,780 INFO     pipe_thread.py kill    : Kill called.
+pre_processed.mkv 2021-12-11 07:01:53,114 INFO     merge.py join    : Join called.
+pre_processed.mkv 2021-12-11 07:01:58,794 INFO     merge.py join    : Join finished.
+pre_processed.mkv 2021-12-11 07:01:58,795 INFO     residual.py join    : Method called.
+pre_processed.mkv 2021-12-11 07:01:58,795 INFO     residual.py join    : Join finished.
+pre_processed.mkv 2021-12-11 07:01:58,795 INFO     status_thread.py join    : Join called.
+pre_processed.mkv 2021-12-11 07:01:58,795 INFO     status_thread.py join    : Join finished.
+Total runtime duration: 343.4067084789276
