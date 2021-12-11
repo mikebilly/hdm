@@ -1,0 +1,64 @@
+
+    __      __  _       _                  ___   __   __
+    \ \    / / (_)     | |                |__ \  \ \ / /
+     \ \  / /   _    __| |   ___    ___      ) |  \ V /
+      \ \/ /   | |  / _` |  / _ \  / _ \    / /    > <
+       \  /    | | | (_| | |  __/ | (_) |  / /_   / . \
+        \/     |_|  \__,_|  \___|  \___/  |____| /_/ \_\
+
+
+                  Video2X Video Enlarger
+
+                       Version 4.3.3
+
+[+] INFO: Loading files into processing queue
+2021-12-11 07:30:43.307051 [+] INFO: Input path(s): /content/input/ezvid.mkv
+2021-12-11 07:30:43.308513 [+] INFO: File MIME type: video/x-matroska
+[+] INFO: Loaded files into processing queue
+2021-12-11 07:30:43.310293 [+] INFO: Input file: /content/input/ezvid.mkv
+[+] INFO: Reading file information
+2021-12-11 07:30:43.310503 [+] INFO: Executing: /usr/bin/ffprobe -v quiet -print_format json -show_format -show_streams -i /content/input/ezvid.mkv
+2021-12-11 07:30:43.634511 [+] INFO: Creating cache directory /tmp/video2x
+2021-12-11 07:30:43.635010 [+] INFO: Extracted frames are being saved to: /tmp/video2x/tmp_6l5puor
+2021-12-11 07:30:43.635300 [+] INFO: Upscaled frames are being saved to: /tmp/video2x/tmplj9g_u99
+[+] INFO: Starting upscaling video/GIF
+[+] INFO: Getting total number of frames in the file
+2021-12-11 07:30:43.635669 [+] INFO: Executing: /usr/bin/ffprobe -v quiet -count_frames -select_streams v -show_entries stream=nb_read_frames -of default=nokey=1:noprint_wrappers=1 /content/input/ezvid.mkv
+[+] INFO: Calculating scaling parameters
+2021-12-11 07:30:43.774494 [+] INFO: Framerate: 30.0
+2021-12-11 07:30:43.774672 [+] INFO: Width: 576
+2021-12-11 07:30:43.774779 [+] INFO: Height: 576
+2021-12-11 07:30:43.774896 [+] INFO: Total number of frames: 27
+2021-12-11 07:30:43.775011 [+] INFO: Output width: 1152
+2021-12-11 07:30:43.775131 [+] INFO: Output height: 1152
+2021-12-11 07:30:43.775247 [+] INFO: Required scale ratio: 2.0
+2021-12-11 07:30:43.775377 [+] INFO: Upscaling jobs queue: [2]
+2021-12-11 07:30:43.775600 [+] INFO: Executing: /usr/bin/ffmpeg -hwaccel auto -y -i /content/input/ezvid.mkv -pix_fmt rgb24 /tmp/video2x/tmp_6l5puor/extracted_%0d.png
+2021-12-11 07:30:43.780661 [+] INFO: Main process waiting for subprocesses to exit
+2021-12-11 07:30:44.482275 [+] INFO: Subprocess 461 exited with code 0
+[+] INFO: Starting to upscale extracted frames
+2021-12-11 07:30:44.590695 [+] INFO: [upscaler] Subprocess 452 executing: /content/waifu2x-ncnn-vulkan-20210521-ubuntu/waifu2x-ncnn-vulkan -n 3 -s 2 -t 400 -g 0 -j 1:1:1 -x -f png -i /tmp/video2x/tmp_6l5puor -o /tmp/video2x/tmplj9g_u99
+2021-12-11 07:30:44.592137 [+] INFO: Starting progress monitor
+2021-12-11 07:30:44.592933 [+] INFO: Starting upscaled image cleaner
+2021-12-11 07:30:44.604689 [+] INFO: Main process waiting for subprocesses to exit
+Processing: ezvid.mkv (pass 1/1): 28it [05:32, 11.76s/it]                        2021-12-11 07:36:28.772395 [+] INFO: Subprocess 473 exited with code 0
+2021-12-11 07:36:28.872941 [+] INFO: Killing progress monitor
+Processing: ezvid.mkv (pass 1/1): 28it [05:44, 12.30s/it]
+2021-12-11 07:36:29.067688 [+] INFO: Killing upscaled image cleaner
+[+] INFO: Upscaling completed
+[+] INFO: Average processing speed: 0.07837780995959603 seconds per frame
+[+] INFO: Lanczos downscaling frames
+Downscaling: 100%|##########| 29/29 [00:00<00:00, 1124.50it/s]
+[+] INFO: Converting extracted frames into video
+2021-12-11 07:36:29.098611 [+] INFO: Executing: /usr/bin/ffmpeg -r 30.0 -hwaccel auto -y -f image2 -i /tmp/video2x/tmplj9g_u99/extracted_%d.png -vcodec libx264 -pix_fmt yuv420p -crf 17 -vf pad=ceil(iw/2)*2:ceil(ih/2)*2 -tune animation /tmp/video2x/tmplj9g_u99/intermediate.mkv
+2021-12-11 07:36:29.100352 [+] INFO: Main process waiting for subprocesses to exit
+2021-12-11 07:36:33.510198 [+] INFO: Subprocess 533 exited with code 0
+[+] INFO: Conversion completed
+[+] INFO: Migrating audio, subtitles and other streams to upscaled video
+2021-12-11 07:36:33.611143 [+] INFO: Executing: /usr/bin/ffmpeg -hwaccel auto -y -i /tmp/video2x/tmplj9g_u99/intermediate.mkv -i /content/input/ezvid.mkv -map 0:v? -map 1:a? -map 1:s? -map 1:d? -map 1:t? -c copy -map_metadata 0 -metadata comment=Upscaled by Video2X /content/output/ezvid_noise3_2x.mkv
+2021-12-11 07:36:33.612983 [+] INFO: Main process waiting for subprocesses to exit
+2021-12-11 07:36:33.713552 [+] INFO: Subprocess 543 exited with code 0
+Cleaning up cache directory: /tmp/video2x/tmp_6l5puor
+Cleaning up cache directory: /tmp/video2x/tmplj9g_u99
+Cleaning up cache directory: /tmp/video2x
+[+] INFO: Program completed, taking 350.51763 seconds
