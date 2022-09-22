@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
 import argparse
-#import httplib
 import http.client as httplib
 import httplib2
 import os
@@ -140,14 +139,14 @@ if __name__ == '__main__':
   parser.add_argument('--file', required=True, help='Video file to upload')
   parser.add_argument('--title', help='Video title', default='Test Title')
   parser.add_argument('--description', help='Video description',
-    default='Test Description')
+    default='')
   parser.add_argument('--category', default='22',
     help='Numeric video category. ' +
       'See https://developers.google.com/youtube/v3/docs/videoCategories/list')
   parser.add_argument('--keywords', help='Video keywords, comma separated',
     default='')
   parser.add_argument('--privacyStatus', choices=VALID_PRIVACY_STATUSES,
-    default='private', help='Video privacy status.')
+    default='public', help='Video privacy status.')
   args = parser.parse_args()
 
   youtube = get_authenticated_service()
